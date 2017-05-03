@@ -1,2 +1,1 @@
-# owin-app-tpl
-Owin WebAPI App Template
+# Owin WebAPI App Template
