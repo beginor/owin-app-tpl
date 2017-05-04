@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Beginor.OwinApp.Data</RootNamespace>
     <AssemblyName>Beginor.OwinApp.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
