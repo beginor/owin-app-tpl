@@ -1,0 +1,138 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+    AutoMapper (6.0.2) - framework: >= net46
+    Beginor.AppFx.Core (1.1) - framework: >= net46
+    Beginor.Owin.Logging (0.1.2) - framework: >= net46
+      Castle.Core (>= 3.3.3)
+      Microsoft.Owin (>= 3.0.1)
+      Owin (>= 1.0)
+    Beginor.Owin.Security.Aes (0.2.1) - framework: >= net46
+      Microsoft.Owin.Security (>= 3.0.1)
+    Beginor.Owin.StaticFile (0.3.1) - framework: >= net46
+      Owin (>= 1.0)
+    Beginor.Owin.WebApi.Windsor (0.1.2) - framework: >= net46
+      Castle.Windsor (>= 3.3)
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3)
+    Beginor.Owin.Windsor (0.2.1) - framework: >= net46
+      Castle.Core (>= 3.3.3)
+      Castle.Windsor (>= 3.3)
+      Microsoft.Owin (>= 3.0.1)
+      Owin (>= 1.0)
+    Castle.Core (3.3.3)
+    Castle.Core-log4net (3.3) - framework: >= net46
+      Castle.Core (>= 3.3)
+      log4net (1.2.10)
+    Castle.LoggingFacility (3.4) - framework: >= net46
+      Castle.Core (>= 3.3 < 4.0)
+      Castle.Windsor (>= 3.4)
+    Castle.Windsor (3.4) - framework: >= net46
+      Castle.Core (>= 3.3 < 4.0)
+    Castle.Windsor-log4net (3.4) - framework: >= net46
+      Castle.Core-log4net (>= 3.3 < 4.0)
+      Castle.LoggingFacility (>= 3.4)
+    Iesi.Collections (4.0.1.4000)
+    log4net (1.2.10) - framework: >= net46
+    Microsoft.AspNet.Cors (5.2.3) - framework: >= net46
+    Microsoft.AspNet.Identity.Core (2.2.1) - framework: >= net46
+    Microsoft.AspNet.Identity.Owin (2.2.1) - framework: >= net46
+      Microsoft.AspNet.Identity.Core (>= 2.2.1)
+      Microsoft.Owin.Security (>= 2.1)
+      Microsoft.Owin.Security.Cookies (>= 2.1)
+      Microsoft.Owin.Security.OAuth (>= 2.1)
+    Microsoft.AspNet.WebApi.Client (5.2.3) - framework: >= net46
+      Newtonsoft.Json (>= 6.0.4) - framework: >= net45, portable-wp80+win+wp81+wpa81
+    Microsoft.AspNet.WebApi.Core (5.2.3) - framework: >= net46
+      Microsoft.AspNet.WebApi.Client (>= 5.2.3)
+    Microsoft.AspNet.WebApi.Cors (5.2.3) - framework: >= net46
+      Microsoft.AspNet.Cors (>= 5.2.3)
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3 < 5.3)
+    Microsoft.AspNet.WebApi.Owin (5.2.3) - framework: >= net46
+      Microsoft.AspNet.WebApi.Core (>= 5.2.3 < 5.3)
+      Microsoft.Owin (>= 2.0.2)
+      Owin (>= 1.0)
+    Microsoft.Owin (3.1) - framework: >= net46
+      Owin (>= 1.0)
+    Microsoft.Owin.Security (3.1) - framework: >= net46
+      Microsoft.Owin (>= 3.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.Security.Cookies (3.1) - framework: >= net46
+      Microsoft.Owin (>= 3.1)
+      Microsoft.Owin.Security (>= 3.1)
+      Owin (>= 1.0)
+    Microsoft.Owin.Security.OAuth (3.1) - framework: >= net46
+      Microsoft.Owin (>= 3.1)
+      Microsoft.Owin.Security (>= 3.1)
+      Newtonsoft.Json (>= 6.0.4)
+      Owin (>= 1.0)
+    Newtonsoft.Json (10.0.2) - framework: >= net46
+    NHibernate (4.1.1.4000) - framework: >= net46
+      Iesi.Collections (>= 4.0 < 5.0)
+    NHibernate.AspNet.Identity (2.2.1) - framework: >= net46
+      Microsoft.AspNet.Identity.Core (>= 2.2)
+      NHibernate (>= 4.0.3.4000)
+    Nowin (0.26) - framework: >= net46
+    Npgsql (3.2.2) - framework: >= net46
+      System.Threading.Tasks.Extensions (>= 4.3) - framework: net45, >= net451, >= netstandard13
+    NUnit (3.6.1) - framework: >= net46
+      NETStandard.Library (>= 1.6) - framework: >= net463, >= netstandard16
+      System.Runtime.Loader (>= 4.0) - framework: >= net463, >= netstandard16
+    Owin (1.0) - framework: >= net46
+    Swashbuckle.Core (5.5.3) - framework: >= net46
+      Microsoft.AspNet.WebApi.Core (>= 4.0.20710)
+    System.Threading.Tasks.Extensions (4.3) - framework: >= net46
+  remote: https://dotnet.myget.org/F/dotnet-core
+    Microsoft.Win32.Primitives (4.3.0) - framework: >= net463
+    NETStandard.Library (1.6.1) - framework: >= net463
+      Microsoft.Win32.Primitives (>= 4.3) - framework: >= net46, >= netstandard13
+      System.AppContext (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Collections.Concurrent (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Console (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Diagnostics.Tracing (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Globalization.Calendars (>= 4.3) - framework: >= net46, >= netstandard13
+      System.IO.Compression (>= 4.3) - framework: >= net45, >= netstandard11
+      System.IO.Compression.ZipFile (>= 4.3) - framework: >= net46, >= netstandard13
+      System.IO.FileSystem (>= 4.3) - framework: >= net46, >= netstandard13
+      System.IO.FileSystem.Primitives (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Net.Http (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Net.Sockets (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Runtime.Handles (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Runtime.InteropServices (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Runtime.InteropServices.RuntimeInformation (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Runtime.Numerics (>= 4.3) - framework: >= net45, >= netstandard11
+      System.Security.Cryptography.Algorithms (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Security.Cryptography.Primitives (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Security.Cryptography.X509Certificates (>= 4.3) - framework: >= net46, >= netstandard13
+      System.Threading.Timer (>= 4.3) - framework: >= net451, >= netstandard12
+    System.AppContext (4.3.0) - framework: >= net463
+    System.Collections.Concurrent (4.3.0) - framework: >= net463
+    System.Console (4.3.0) - framework: >= net463
+    System.Diagnostics.Tracing (4.3.0) - framework: >= net463
+    System.Globalization.Calendars (4.3.0) - framework: >= net463
+    System.IO (4.3.0) - framework: >= net463
+    System.IO.Compression (4.3.0) - framework: >= net463
+    System.IO.Compression.ZipFile (4.3.0) - framework: >= net463
+    System.IO.FileSystem (4.3.0) - framework: >= net463
+      System.IO.FileSystem.Primitives (>= 4.3) - framework: >= net46, >= netstandard13
+    System.IO.FileSystem.Primitives (4.3.0) - framework: >= net463
+    System.Net.Http (4.3.1) - framework: >= net463
+      System.Security.Cryptography.X509Certificates (>= 4.3) - framework: >= net46, dnxcore50, netstandard13, >= netstandard16
+    System.Net.Sockets (4.3.0) - framework: >= net463
+    System.Runtime (4.3.0) - framework: >= net463
+    System.Runtime.Handles (4.3.0) - framework: >= net463
+    System.Runtime.InteropServices (4.3.0) - framework: >= net463
+      System.Runtime (>= 4.3) - framework: net462, >= net463, dnxcore50, netstandard11, netstandard12, netstandard13, >= netstandard15, netcore11
+    System.Runtime.InteropServices.RuntimeInformation (4.3.0) - framework: >= net463
+    System.Runtime.Loader (4.3.0) - framework: >= net463
+    System.Runtime.Numerics (4.3.0) - framework: >= net463
+    System.Security.Cryptography.Algorithms (4.3.0) - framework: >= net463
+      System.IO (>= 4.3) - framework: >= net463, dnxcore50, netstandard13, netstandard14, >= netstandard16
+      System.Runtime (>= 4.3) - framework: >= net463, dnxcore50, netstandard13, netstandard14, >= netstandard16
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: >= net463, dnxcore50, >= netstandard16
+      System.Security.Cryptography.Primitives (>= 4.3) - framework: net46, net461, >= net463, dnxcore50, netstandard13, netstandard14, >= netstandard16
+    System.Security.Cryptography.Encoding (4.3.0) - framework: >= net463
+    System.Security.Cryptography.Primitives (4.3.0) - framework: >= net463
+    System.Security.Cryptography.X509Certificates (4.3.0) - framework: >= net463
+      System.Security.Cryptography.Algorithms (>= 4.3) - framework: net46, >= net461, dnxcore50, netstandard13, netstandard14, >= netstandard16
+      System.Security.Cryptography.Encoding (>= 4.3) - framework: net46, >= net461, dnxcore50, netstandard13, netstandard14, >= netstandard16
+    System.Threading.Timer (4.3.0) - framework: >= net463
