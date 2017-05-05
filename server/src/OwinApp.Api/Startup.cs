@@ -44,7 +44,13 @@ namespace Beginor.OwinApp.Api {
             var windsorConfigPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "windsor.config");
             app.UseWindsorContainer(windsorConfigPath);
             var container = app.GetWindsorContainer();
-            container.Install(FromAssembly.This());
+            container.Install(
+                FromAssembly.Named("Beginor.OwinApp.Data"),
+                FromAssembly.Named("Beginor.OwinApp.Model"),
+                FromAssembly.Named("Beginor.OwinApp.Logic"),
+                FromAssembly.Named("Beginor.OwinApp.Security"),
+                FromAssembly.Named("Beginor.OwinApp.Api")
+            );
             app.UseWindsorMiddleWare();
         }
 

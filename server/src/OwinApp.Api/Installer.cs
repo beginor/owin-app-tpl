@@ -11,7 +11,7 @@ namespace Beginor.OwinApp.Api {
             container.Register(
                  Classes.FromThisAssembly()
                 .Where(type => type.Name.EndsWith("Controller", StringComparison.Ordinal))
-                    .Configure(cfg => cfg.LifestyleSingleton())
+                .Configure(cfg => cfg.LifestyleTransient())
             );
         }
 
