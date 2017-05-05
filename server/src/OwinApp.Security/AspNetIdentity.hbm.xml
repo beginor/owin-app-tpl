@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:nhibernate-mapping-2.2">
+    <class name="NHibernate.AspNet.Identity.IdentityUser, NHibernate.AspNet.Identity" schema="public" table="aspnet_user">
+        <id name="Id" column="id" type="string" length="32">
+            <generator class="uuid.hex">
+                <param name="format">N</param>
+            </generator>
+        </id>
+        <property name="AccessFailedCount" column="access_failed_count" type="int" not-null="true"/>
+        <property name="Email" column="email" type="string" length="255" not-null="true"/>
+        <property name="EmailConfirmed" column="email_confirmed" type="bool" not-null="true"/>
+        <property name="LockoutEnabled" column="lockout_enabled" type="bool" not-null="true"/>
+        <property name="LockoutEndDateUtc" column="lockout_end_date_utc" type="datetime" />
+        <property name="PasswordHash" column="password_hash" type="string" length="255"/>
+        <property name="PhoneNumber" column="phone_number" type="string" length="128" />
+        <property name="PhoneNumberConfirmed" column="phone_number_confirmed" type="bool" not-null="true"/>
+        <property name="TwoFactorEnabled" column="two_factor_enabled" type="bool" not-null="true"/>
+        <property name="UserName" column="user_name" type="string" length="255" not-null="true" unique="true" />
+        <property name="SecurityStamp" column="security_stamp" type="string" length="255" />
+        <bag name="Roles" schema="public" table="aspnet_user_role" inverse="true">
+            <key>
+                <column name="user_id" />
+            </key>
+            <many-to-many class="NHibernate.AspNet.Identity.IdentityRole, NHibernate.AspNet.Identity" fetch="join">
+                <column name="role_id" />
+            </many-to-many>
+        </bag>
+        <bag name="Claims" cascade="all,delete-orphan">
+            <key column="user_id" update="false" />
+            <one-to-many class="NHibernate.AspNet.Identity.IdentityUserClaim, NHibernate.AspNet.Identity" />
+        </bag>
+        <set name="Logins" schema="public" table="aspnet_user_login" cascade="all,delete-orphan">
+            <key column="user_id" />
+            <composite-element class="NHibernate.AspNet.Identity.IdentityUserLogin, NHibernate.AspNet.Identity">
+                <property name="LoginProvider" column="login_provider" type="string" length="128" not-null="true"/>
+                <property name="ProviderKey" column="provider_key" type="string" length="128" not-null="true"/>
+            </composite-element>
+        </set>
+    </class>
+    <class name="NHibernate.AspNet.Identity.IdentityRole, NHibernate.AspNet.Identity" schema="public" table="aspnet_role">
+        <id name="Id" column="id" type="String" length="32">
+            <generator class="uuid.hex">
+                <param name="format">N</param>
+            </generator>
+        </id>
+        <property name="Name" column="name" length="255" not-null="true" unique="true" />
+        <set name="Users" schema="public" table="aspnet_user_role" inverse="false">
+            <key>
+                <column name="role_id" />
+            </key>
+            <many-to-many class="NHibernate.AspNet.Identity.IdentityUser, NHibernate.AspNet.Identity">
+                <column name="user_id" />
+            </many-to-many>
+        </set>
+    </class>
+    <class name="NHibernate.AspNet.Identity.IdentityUserClaim, NHibernate.AspNet.Identity" schema="public" table="aspnet_user_claim">
+        <id name="Id" column="id" type="int">
+            <generator class="identity" />
+        </id>
+        <property name="ClaimType" column="claim_type" type="string" length="1024" />
+        <property name="ClaimValue" column="claim_value" type="string" length="1024" />
+        <many-to-one name="User" column="user_id" />
+    </class>
+</hibernate-mapping>

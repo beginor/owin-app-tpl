@@ -44,10 +44,24 @@
     <Reference Include="NHibernate.AspNet.Identity">
       <HintPath>..\..\..\..\packages\NHibernate.AspNet.Identity.2.2.1.0\lib\net45\NHibernate.AspNet.Identity.dll</HintPath>
     </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\..\..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\..\..\packages\Castle.Windsor.3.4.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Beginor.AppFx.Core">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SampleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="ModelMappings.cs" />
+    <Compile Include="ISampleManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OwinApp.Data\OwinApp.Data.csproj">

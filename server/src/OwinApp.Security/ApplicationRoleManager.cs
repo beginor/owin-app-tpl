@@ -1,13 +1,11 @@
-﻿using System;
-using Beginor.OwinApp.Data;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using NHibernate.AspNet.Identity;
 
 namespace Beginor.OwinApp.Security {
 
-    public class ApplicationRoleManager : RoleManager<ApplicationRole> {
+    public class ApplicationRoleManager : RoleManager<IdentityRole> {
 
-        public ApplicationRoleManager(RoleStore<ApplicationRole> roleStore) : base(roleStore) {
+        public ApplicationRoleManager(RoleStore<IdentityRole> roleStore) : base(roleStore) {
         }
 
     }

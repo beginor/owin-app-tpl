@@ -1,10 +1,8 @@
-﻿using System.Linq;
+﻿﻿using System.Linq;
 using NHibernate.AspNet.Identity;
 
-namespace Beginor.OwinApp.Data {
+namespace Beginor.OwinApp.Security {
     
-    public class ApplicationUser : IdentityUser { }
-
     public static class IdentityUserExtensions {
 
         public static string GetClaimValue(

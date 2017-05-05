@@ -7,9 +7,17 @@ namespace Beginor.OwinApp.Api.Controllers {
     [RoutePrefix("rest/samples")]
     public class SamplesController : ApiController {
 
-        private SampleManager mgr = new SampleManager();
+        private ISampleManager mgr;
 
-        public SamplesController() {
+        public SamplesController(ISampleManager mgr) {
+            this.mgr = mgr;
+        }
+
+        protected override void Dispose(bool disposing) {
+            if (disposing) {
+                mgr = null;
+            }
+            base.Dispose(disposing);
         }
 
         [HttpGet, Route("")]

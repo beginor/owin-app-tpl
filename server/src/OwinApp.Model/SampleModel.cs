@@ -1,11 +1,9 @@
 ﻿using System;
+using Beginor.AppFx.Core;
 
 namespace Beginor.OwinApp.Model {
 
-    public class SampleModel {
-
-        public SampleModel() {
-        }
+    public class SampleModel : Int32IdNameEntity {
 
     }
 

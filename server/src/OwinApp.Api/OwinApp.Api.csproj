@@ -107,6 +107,12 @@
     <Reference Include="Castle.Services.Logging.Log4netIntegration">
       <HintPath>..\..\..\..\packages\Castle.Core-log4net.3.3.0\lib\net45\Castle.Services.Logging.Log4netIntegration.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\packages\Npgsql.3.2.2\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +120,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\SamplesController.cs" />
     <Compile Include="ConsoleLogMiddleware.cs" />
+    <Compile Include="Installer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

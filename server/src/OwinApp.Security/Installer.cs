@@ -1,6 +1,4 @@
-﻿using System;
-using Beginor.OwinApp.Data;
-using Castle.MicroKernel.Registration;
+﻿using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Microsoft.AspNet.Identity;
@@ -24,23 +22,23 @@ namespace Beginor.OwinApp.Security {
                     .ImplementedBy<SmsService>()
                     .LifestyleTransient()
                     .Named("smsService"),
-                Component.For<UserStore<ApplicationUser>>()
+                Component.For<UserStore<IdentityUser>>()
                     .ImplementedBy<ApplicationUserStore>()
                     .LifestyleTransient(),
-                Component.For<RoleStore<ApplicationRole>>()
+                Component.For<RoleStore<IdentityRole>>()
                     .ImplementedBy<ApplicationRoleStore>()
                     .LifestyleTransient(),
-                Component.For<UserManager<ApplicationUser>>()
+                Component.For<UserManager<IdentityUser>>()
                     .ImplementedBy<ApplicationUserManager>()
                     .LifestyleTransient()
                     .DependsOn(
                         Dependency.OnComponent("emailService", "emailService"),
                         Dependency.OnComponent("smsService", "smsService")
                     ),
-                Component.For<RoleManager<ApplicationRole>>()
+                Component.For<RoleManager<IdentityRole>>()
                     .ImplementedBy<ApplicationRoleManager>()
                     .LifestyleTransient(),
-                Component.For<SignInManager<ApplicationUser, string>>()
+                Component.For<SignInManager<IdentityUser, string>>()
                     .ImplementedBy<ApplicationSignInManager>()
                     .LifestyleTransient()
             );

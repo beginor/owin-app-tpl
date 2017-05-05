@@ -1,8 +1,8 @@
 ﻿using System;
-using Beginor.OwinApp.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security.Cookies;
+using NHibernate.AspNet.Identity;
 
 namespace Beginor.OwinApp.Security {
 
@@ -11,7 +11,7 @@ namespace Beginor.OwinApp.Security {
         public AuthenticationProvider(
             TimeSpan validateInterval
         ) {
-            this.OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<UserManager<ApplicationUser>, ApplicationUser>(
+            this.OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<UserManager<IdentityUser>, IdentityUser>(
                 validateInterval: validateInterval,
                 regenerateIdentity: (mgr, user) => mgr.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie)
             );

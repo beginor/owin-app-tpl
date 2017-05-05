@@ -1,15 +1,15 @@
 ﻿using System;
-using Beginor.OwinApp.Data;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using NHibernate.AspNet.Identity;
 
 namespace Beginor.OwinApp.Security {
 
-    public class ApplicationSignInManager : SignInManager<ApplicationUser, string> {
+    public class ApplicationSignInManager : SignInManager<IdentityUser, string> {
 
         public ApplicationSignInManager(
-            UserManager<ApplicationUser> userManager,
+            UserManager<IdentityUser> userManager,
             IAuthenticationManager authenticationManager
         ) : base(userManager, authenticationManager) { }
 

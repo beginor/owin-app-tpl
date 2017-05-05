@@ -1,11 +1,11 @@
-﻿using Beginor.OwinApp.Data;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
+using NHibernate.AspNet.Identity;
 
 namespace Beginor.OwinApp.Security {
 
-    public class ApplicationUserManager : UserManager<ApplicationUser> {
+    public class ApplicationUserManager : UserManager<IdentityUser> {
 
-        public ApplicationUserManager(IUserStore<ApplicationUser> store) : base(store) {
+        public ApplicationUserManager(IUserStore<IdentityUser> store) : base(store) {
         }
 
     }

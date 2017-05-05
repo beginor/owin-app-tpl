@@ -80,6 +80,9 @@
     <Compile Include="SmsService.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="ApplicationSignInManager.cs" />
+    <Compile Include="IdentityUserExtensions.cs" />
+    <Compile Include="ApplicationRoleStore.cs" />
+    <Compile Include="ApplicationUserStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -89,6 +92,9 @@
       <Project>{C5CBB74B-1AC9-443A-9DA0-5E178F836497}</Project>
       <Name>OwinApp.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AspNetIdentity.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
