@@ -6,4 +6,3 @@ Microsoft.AspNet.Identity.Core
 NHibernate
 NHibernate.AspNet.Identity
 Npgsql
-System.Threading.Tasks.Extensions

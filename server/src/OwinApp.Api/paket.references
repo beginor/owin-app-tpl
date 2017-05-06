@@ -25,4 +25,3 @@ Newtonsoft.Json
 Npgsql
 Owin
 Swashbuckle.Core
-System.Threading.Tasks.Extensions
