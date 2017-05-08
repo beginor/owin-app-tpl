@@ -23,6 +23,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C7C01852-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Test", "server\test\OwinApp.Test\OwinApp.Test.csproj", "{5B543D12-C277-4792-A038-08677D654A1E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{8C9343F9-1792-4C99-93F7-2164587BBCDA}"
+	ProjectSection(SolutionItems) = preProject
+		jexus\conf\default = jexus\conf\default
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jexus", "jexus", "{1016ED96-3B65-42B7-8A27-A4A53CFB495A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +75,7 @@ Global
 		{9DA414AF-1970-489A-96E2-CF3444D314BB} = {5F30533B-F1E3-4DE5-BFE7-A3AC40CA99C3}
 		{C7C01852-837A-4320-8356-10701D96E4FF} = {65A177FF-47FA-4C30-8E5A-E4368AD1E3F4}
 		{5B543D12-C277-4792-A038-08677D654A1E} = {C7C01852-837A-4320-8356-10701D96E4FF}
+		{8C9343F9-1792-4C99-93F7-2164587BBCDA} = {1016ED96-3B65-42B7-8A27-A4A53CFB495A}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		version = 1.0.0
