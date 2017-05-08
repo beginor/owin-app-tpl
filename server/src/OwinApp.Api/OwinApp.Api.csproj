@@ -104,14 +104,14 @@
     <Reference Include="Beginor.Owin.Windsor">
       <HintPath>..\..\..\..\packages\Beginor.Owin.Windsor.0.2.2\lib\net45\Beginor.Owin.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="Beginor.Owin.WebApi.Windsor">
-      <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.2.0\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\..\..\..\packages\Npgsql.3.2.2\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.Owin.WebApi.Windsor">
+      <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.2.1\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
