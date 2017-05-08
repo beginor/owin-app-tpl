@@ -11,7 +11,7 @@ namespace Beginor.OwinApp.Logic {
         public void Install(IWindsorContainer container, IConfigurationStore store) {
             container.Register(
                 Component.For<IStartable>()
-                    .ImplementedBy<ModelMappings>().Named("ModelMappings")
+                    .ImplementedBy<ModelMappings>().Named(typeof(ModelMappings).FullName)
                     .LifestyleTransient(),
                  Classes.FromThisAssembly()
                     .Where(type => type.Name.EndsWith("Manager", StringComparison.Ordinal))

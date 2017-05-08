@@ -3,6 +3,7 @@ using Beginor.Owin.StaticFile;
 using Microsoft.Owin.Security.DataProtection;
 using NUnit.Framework;
 using Beginor.OwinApp.Logic;
+using Castle.Core;
 
 namespace Beginor.OwinApp.Test {
     
@@ -35,7 +36,7 @@ namespace Beginor.OwinApp.Test {
 
         [Test]
         public void CanResolveModelMappings() {
-            var mappings = Container.Resolve<ModelMappings>();
+            var mappings = Container.Resolve<IStartable>(typeof(ModelMappings).FullName);
             mappings.Start();
             Assert.NotNull(mappings);
         }
