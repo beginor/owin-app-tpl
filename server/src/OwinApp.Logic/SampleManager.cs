@@ -24,7 +24,9 @@ namespace Beginor.OwinApp.Logic {
         }
 
         public IList<SampleModel> GetAll() {
-            return repo.GetAll().AsQueryable()
+            var task = repo.GetAllAsync();
+            task.Wait();
+            return task.Result.AsQueryable()
                .ProjectTo<SampleModel>().ToList();
         }
 

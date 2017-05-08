@@ -1,27 +1,14 @@
 ﻿using System.Collections.Generic;
 using Beginor.AppFx.Core;
 using NHibernate;
+using Beginor.AppFx.Repository.Hibernate;
 
 namespace Beginor.OwinApp.Data {
 
-    public class SampleRepository : Disposable, ISampleRepository {
+    public class SampleRepository
+        : HibernateRepository<SampleEntity, int>, ISampleRepository {
 
-        private ISessionFactory factory;
-
-        public SampleRepository(ISessionFactory factory) {
-            this.factory = factory;
-        }
-
-        protected override void Dispose(bool disposing) {
-            if (disposing) {
-                this.factory = null;
-            }
-            base.Dispose(disposing);
-        }
-
-        public IList<SampleEntity> GetAll() {
-            return new List<SampleEntity>();
-        }
+        public SampleRepository(ISessionFactory factory) : base(factory) { }
 
     }
 

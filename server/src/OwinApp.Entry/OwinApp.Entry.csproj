@@ -38,9 +38,6 @@
     <Reference Include="Microsoft.Owin">
       <HintPath>..\..\..\..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Beginor.AppFx.Core">
-      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Castle.Windsor">
       <HintPath>..\..\..\..\packages\Castle.Windsor.3.4.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
@@ -112,6 +109,9 @@
     </Reference>
     <Reference Include="Beginor.Owin.WebApi.Windsor">
       <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.2.1\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.AppFx.Core">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.1\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

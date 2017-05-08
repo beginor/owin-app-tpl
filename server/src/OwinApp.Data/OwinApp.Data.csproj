@@ -29,9 +29,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Beginor.AppFx.Core">
-      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\..\..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
     </Reference>
@@ -58,6 +55,12 @@
     <Reference Include="Npgsql">
       <HintPath>..\..\..\..\packages\Npgsql.3.2.2\lib\net45\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="Beginor.AppFx.Core">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.1\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.AppFx.Repository.Hibernate">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Repository.Hibernate.1.0.0\lib\net45\Beginor.AppFx.Repository.Hibernate.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SampleEntity.cs" />
@@ -68,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SampleEntity.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

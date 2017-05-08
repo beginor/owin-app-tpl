@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
+using Beginor.AppFx.Core;
 
 namespace Beginor.OwinApp.Data {
     
-    public interface ISampleRepository {
-
-        IList<SampleEntity> GetAll();
+    public interface ISampleRepository : IRepository<SampleEntity, int> {
 
     }
 }

@@ -52,9 +52,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Beginor.AppFx.Core">
-      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Owin">
       <HintPath>..\..\..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
@@ -110,6 +107,12 @@
     </Reference>
     <Reference Include="Beginor.Owin.WebApi.Windsor">
       <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.2.1\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.AppFx.Core">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.1\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.AppFx.Repository.Hibernate">
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Repository.Hibernate.1.0.0\lib\net45\Beginor.AppFx.Repository.Hibernate.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,8 @@
 ﻿using NUnit.Framework;
+using Beginor.AppFx.Core;
 using Beginor.OwinApp.Data;
+using System.Threading.Tasks;
+using System;
 
 namespace Beginor.OwinApp.Test.Data {
 
@@ -7,8 +10,9 @@ namespace Beginor.OwinApp.Test.Data {
     public class SampleRepositoryTest : WindsorTest<ISampleRepository> {
 
         [Test]
-        public void CanGetAll() {
-            var result = Target.GetAll();
+        public async Task CanGetAll() {
+            var result = await Target.GetAllAsync();
+            Console.WriteLine(result.Count);
             Assert.IsTrue(result.Count >= 0);
         }
 

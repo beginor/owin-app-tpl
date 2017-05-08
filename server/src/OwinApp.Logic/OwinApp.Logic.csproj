@@ -54,7 +54,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
     <Reference Include="Beginor.AppFx.Core">
-      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
+      <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.1\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-mapping
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:nhibernate-mapping-2.2"
+    namespace="Beginor.OwinApp.Data"
+    assembly="Beginor.OwinApp.Data"
+    >
+    <class name="SampleEntity"
+        table="sample" schema="public"
+        >
+        <id name="Id" column="id" type="int">
+            <generator class="identity" />
+        </id>
+        <property name="Name" column="name" type="string" length="32" />
+        <many-to-one name="User" column="user_id" />
+    </class>
+</hibernate-mapping>
