@@ -1,8 +1,0 @@
-AutoMapper
-Beginor.AppFx.Core
-Castle.Core
-Castle.Windsor
-Iesi.Collections
-Microsoft.AspNet.Identity.Core
-NHibernate
-NHibernate.AspNet.Identity
