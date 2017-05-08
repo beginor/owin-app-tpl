@@ -7,7 +7,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Beginor.OwinApp.Entry</RootNamespace>
     <AssemblyName>Beginor.OwinApp.Entry</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -38,12 +38,6 @@
     <Reference Include="Microsoft.Owin">
       <HintPath>..\..\..\..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\..\..\packages\Npgsql.3.2.2\lib\net451\Npgsql.dll</HintPath>
-    </Reference>
     <Reference Include="Beginor.AppFx.Core">
       <HintPath>..\..\..\..\packages\Beginor.AppFx.Core.1.1.0\lib\portable-net45+win8+wp8\Beginor.AppFx.Core.dll</HintPath>
     </Reference>
@@ -73,18 +67,12 @@
     <Reference Include="Castle.Core">
       <HintPath>..\..\..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Beginor.Owin.Windsor">
-      <HintPath>..\..\..\..\packages\Beginor.Owin.Windsor.0.2.1\lib\net45\Beginor.Owin.Windsor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Http">
       <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Beginor.Owin.WebApi.Windsor">
-      <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.1.2\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="Beginor.Owin.Security.Aes">
       <HintPath>..\..\..\..\packages\Beginor.Owin.Security.Aes.0.2.1\lib\net45\Beginor.Owin.Security.Aes.dll</HintPath>
@@ -113,6 +101,18 @@
     <Reference Include="Swashbuckle.Core">
       <HintPath>..\..\..\..\packages\Swashbuckle.Core.5.5.3\lib\net40\Swashbuckle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\packages\Npgsql.3.2.2\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.Owin.Windsor">
+      <HintPath>..\..\..\..\packages\Beginor.Owin.Windsor.0.2.2\lib\net45\Beginor.Owin.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Beginor.Owin.WebApi.Windsor">
+      <HintPath>..\..\..\..\packages\Beginor.Owin.WebApi.Windsor.0.2.0\lib\net45\Beginor.Owin.WebApi.Windsor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -130,6 +130,8 @@
     <None Include="hibernate.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="web.config" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OwinApp.Api\OwinApp.Api.csproj">
