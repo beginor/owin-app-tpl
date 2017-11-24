@@ -1,0 +1,20 @@
+version: "3"
+services:
+  jexus:
+    image: beginor/jexus-x64:5.8.2
+    ports: 
+      - 5824:80
+    volumes:
+      - ./server/src/OwinApp.Entry:/var/www/default
+      - ./jexus/conf/default:/usr/jexus/siteconf/default:ro
+      - ./jexus/log:/usr/jexus/log
+    restart: unless-stopped
+  postgres:
+    image: beginor/postgis:9.3
+    ports:
+      - 3232:5432
+    volumes:
+      - ./deploy/postgres/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: pg_sql_93
+    restart: unless-stopped
