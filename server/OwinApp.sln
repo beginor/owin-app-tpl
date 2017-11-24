@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F30533B-F1E3-4DE5-BFE7-A3AC40CA99C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Api", "server\src\OwinApp.Api\OwinApp.Api.csproj", "{FF0F4902-976A-41DD-9408-24BE6029C2CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Api", "src\OwinApp.Api\OwinApp.Api.csproj", "{FF0F4902-976A-41DD-9408-24BE6029C2CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Entry", "server\src\OwinApp.Entry\OwinApp.Entry.csproj", "{E4A84AC7-5FE2-4F87-AFD3-435CA2DD92D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Entry", "src\OwinApp.Entry\OwinApp.Entry.csproj", "{E4A84AC7-5FE2-4F87-AFD3-435CA2DD92D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Logic", "server\src\OwinApp.Logic\OwinApp.Logic.csproj", "{9952890D-739E-4609-97B3-6312B4BFDDE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Logic", "src\OwinApp.Logic\OwinApp.Logic.csproj", "{9952890D-739E-4609-97B3-6312B4BFDDE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Data", "server\src\OwinApp.Data\OwinApp.Data.csproj", "{C5CBB74B-1AC9-443A-9DA0-5E178F836497}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Data", "src\OwinApp.Data\OwinApp.Data.csproj", "{C5CBB74B-1AC9-443A-9DA0-5E178F836497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Model", "server\src\OwinApp.Model\OwinApp.Model.csproj", "{715ACD2F-9FCE-4E15-8B32-667D38C9DD05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Model", "src\OwinApp.Model\OwinApp.Model.csproj", "{715ACD2F-9FCE-4E15-8B32-667D38C9DD05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Security", "server\src\OwinApp.Security\OwinApp.Security.csproj", "{9DA414AF-1970-489A-96E2-CF3444D314BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Security", "src\OwinApp.Security\OwinApp.Security.csproj", "{9DA414AF-1970-489A-96E2-CF3444D314BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C7C01852-837A-4320-8356-10701D96E4FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Test", "server\test\OwinApp.Test\OwinApp.Test.csproj", "{5B543D12-C277-4792-A038-08677D654A1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinApp.Test", "test\OwinApp.Test\OwinApp.Test.csproj", "{5B543D12-C277-4792-A038-08677D654A1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
