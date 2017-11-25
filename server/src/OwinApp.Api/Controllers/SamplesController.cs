@@ -29,6 +29,7 @@ namespace Beginor.OwinApp.Api.Controllers {
                 return Ok(mgr.GetAll());
             }
             catch (Exception ex) {
+                Logger.Error("无法查询示例！", ex);
                 return InternalServerError(ex);
             }
         }

@@ -12,7 +12,7 @@ namespace Beginor.OwinApp.Logic {
             container.Register(
                 Component.For<IStartable>()
                     .ImplementedBy<ModelMappings>().Named(typeof(ModelMappings).FullName)
-                    .LifestyleTransient(),
+                    .LifestyleSingleton(),
                  Classes.FromThisAssembly()
                     .Where(type => type.Name.EndsWith("Manager", StringComparison.Ordinal))
                     .WithServiceDefaultInterfaces()

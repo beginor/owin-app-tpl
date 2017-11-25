@@ -141,6 +141,7 @@
     <Compile Include="Data\SampleRepositoryTest.cs" />
     <Compile Include="Logic\SampleManagerTest.cs" />
     <Compile Include="Controller\SamplesControllerTest.cs" />
+    <Compile Include="Controller\HomeControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\OwinApp.Logic\OwinApp.Logic.csproj">

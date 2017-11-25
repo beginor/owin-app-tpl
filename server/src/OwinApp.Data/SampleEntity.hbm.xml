@@ -6,6 +6,17 @@
     namespace="Beginor.OwinApp.Data"
     assembly="Beginor.OwinApp.Data"
     >
+
+    <typedef name="json" class="Beginor.NHibernate.NpgSql.JsonType, Beginor.NHibernate.NpgSql" />
+    <typedef name="jsonb" class="Beginor.NHibernate.NpgSql.JsonbType, Beginor.NHibernate.NpgSql" />
+    <typedef name="stringArray" class="Beginor.NHibernate.NpgSql.StringArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int16Array" class="Beginor.NHibernate.NpgSql.Int16ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int32Array" class="Beginor.NHibernate.NpgSql.Int32ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="int64Array" class="Beginor.NHibernate.NpgSql.Int64ArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="floatArray" class="Beginor.NHibernate.NpgSql.FloatArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="doubleArray" class="Beginor.NHibernate.NpgSql.DoubleArrayType, Beginor.NHibernate.NpgSql" />
+    <typedef name="booleanArray" class="Beginor.NHibernate.NpgSql.BooleanArrayType, Beginor.NHibernate.NpgSql" />
+
     <class name="SampleEntity"
         table="sample" schema="public"
         >
