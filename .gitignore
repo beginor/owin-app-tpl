@@ -36,7 +36,7 @@ AppPackages
 *.lib
 *.sbr
 *.sdf
-ipch/ 
+ipch/
 *.dbmdl
 *.cache
 *.swp
@@ -115,7 +115,7 @@ deploy
 # misc
 /.sass-cache
 /connect.lock
-/coverage
+coverage
 /libpeerconnection.log
 npm-debug.log
 testem.log
