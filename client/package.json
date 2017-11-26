@@ -9,7 +9,7 @@
     "build": "ng build",
     "build-prod": "ng build --prod",
     "lint": "ng lint",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "test": "ng test",
     "test-coverage": "ng test --single-run --code-coverage",
     "e2e": "ng e2e --webdriver-update false",
