@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "nuget:restore",
+      "type": "shell",
+      "command": "nuget",
+      "args": [
+        "restore"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "msbuild:clean",
+      "type": "shell",
+      "command": "msbuild",
+      "args": [
+        "/property:GenerateFullPaths=true",
+        "/property:Configuration=Debug",
+        "/target:clean",
+        "/verbosity:normal",
+        "/nologo"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "msbuild",
+      "args": [
+        "/property:GenerateFullPaths=true",
+        "/property:Configuration=Debug",
+        "/target:build",
+        "/verbosity:minimal",
+        "/nologo"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "run",
+      "command": "mono",
+      "args": [
+        "Beginor.OwinApp.Entry.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/src/OwinApp.Entry/bin"
+      }
+    }
+  ]
+}
