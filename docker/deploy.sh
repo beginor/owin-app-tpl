@@ -36,6 +36,7 @@ if [ $? -ne 0 ]; then
     echo "Copy deploy files to docker server error!"
     exit 3
 fi
+echo "Execute update script on docker server ..."
 ssh ubuntu@192.168.1.2 -t '
 cp -rv owin-app Documents/docker/
 rm -rf owin-app
