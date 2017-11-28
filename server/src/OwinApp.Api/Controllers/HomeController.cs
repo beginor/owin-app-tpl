@@ -9,7 +9,7 @@ namespace Beginor.OwinApp.Api.Controllers {
 
         public ILogger Logger { get; set; } = NullLogger.Instance;
 
-        [HttpGet]
+        [HttpGet, Route("")]
         public IHttpActionResult Index() {
             return this.Content(HttpStatusCode.OK, "Hello, world!");
         }
