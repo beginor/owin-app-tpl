@@ -48,7 +48,8 @@
       ],
       "options": {
         "cwd": "${workspaceRoot}/src/OwinApp.Entry/bin"
-      }
+      },
+      "problemMatcher": []
     }
   ]
 }
