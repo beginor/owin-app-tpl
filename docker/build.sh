@@ -32,14 +32,15 @@ if [ $? -ne 0 ]; then
 fi
 echo "Copy config confile to docker"
 cd ../docker
-cp jexus-conf build/default && cp Dockerfile docker
+cp jexus-conf build/default && cp Dockerfile build
 if [ $? -ne 0 ]; then
     echo "Copy config confile to docker error!"
     exit 5
 fi
 echo "Start build docker image ..."
-docker build -t beginor/owin-app . \
-    && docker tag beginor/owin-app beginor/owin-app:$(date +%Y%m%d)
+cd build && docker build -t beginor/owin-app . \
+    && docker tag beginor/owin-app beginor/owin-app:$(date +%Y%m%d) \
+    && cd ..
 if [ $? -ne 0 ]; then
     echo "Build docker image error!"
     exit 6

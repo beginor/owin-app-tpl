@@ -1,4 +1,6 @@
 FROM beginor/jexus:5.8.2.21
 
-COPY build/default /usr/jexus/siteconf/default
-COPY build/web /var/www/default
+COPY ./default /usr/jexus/siteconf/default
+COPY ./web /var/www/default
+
+EXPOSE 80 443
