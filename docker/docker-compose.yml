@@ -1,20 +1,24 @@
 version: "3"
 services:
   jexus:
-    image: beginor/jexus:5.8.2.21
+    image: 192.168.1.2:5000/beginor/owin-app:latest
     ports:
       - 5824:80
     volumes:
-      - ./server/src/OwinApp.Entry:/var/www/default
-      - ./jexus/conf/default:/usr/jexus/siteconf/default:ro
+      - ./jexus/conf/default:/usr/jexus/siteconf/default
       - ./jexus/log:/usr/jexus/log
+      - ./jexus/web/assets:/var/www/default/assets
+      - ./jexus/web/web.config:/var/www/default/web.config
+      - ./jexus/web/log.config:/var/www/default/log.config
+      - ./jexus/web/nhibernate.config:/var/www/default/nhibernate.config
+      - ./jexus/web/windsor.config:/var/www/default/windsor.config
     restart: unless-stopped
   postgres:
-    image: beginor/postgis:9.5
+    image: 192.168.1.2:5000/beginor/postgis:9.5
     ports:
       - 3232:5432
     volumes:
-      - ./deploy/postgres/data:/var/lib/postgresql/data
+      - ./postgres/data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: pg_sql_95
     restart: unless-stopped
