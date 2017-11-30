@@ -1,0 +1,244 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "client:install",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "install"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      }
+    },
+    {
+      "label": "client:clean",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "clean"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      }
+    },
+    {
+      "label": "client:build",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "build"
+      ],
+      "problemMatcher": [
+        "$tsc",
+        "$node-sass"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "client:build-prod",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "build-prod"
+      ],
+      "problemMatcher": [
+        "$tsc",
+        "$node-sass"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "client:lint",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "lint"
+      ],
+      "problemMatcher": [
+        "$tslint5"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      }
+    },
+    {
+      "label": "client:start",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "start"
+      ],
+      "problemMatcher": [
+        "$tsc-watch",
+        "$node-sass"
+      ],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      }
+    },
+    {
+      "label": "client:test",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "test"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "client:test-coverage",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "test-coverage"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "client:e2e",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "e2e"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "client:webdriver-update",
+      "command": "npm",
+      "type": "shell",
+      "args": [
+        "run",
+        "webdriver-update"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/client"
+      }
+    },
+    {
+      "label": "server:restore",
+      "type": "shell",
+      "command": "nuget",
+      "args": [
+        "restore"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/server"
+      },
+      "windows": {
+        "command": "nuget.exe"
+      }
+    },
+    {
+      "label": "server:clean",
+      "type": "shell",
+      "command": "msbuild",
+      "args": [
+        "/property:GenerateFullPaths=true",
+        "/property:Configuration=Debug",
+        "/target:clean",
+        "/verbosity:normal"
+      ],
+      "problemMatcher": ["$msCompile"],
+      "options": {
+        "cwd": "${workspaceRoot}/server"
+      },
+      "windows": {
+        "command": "msbuild.exe"
+      }
+    },
+    {
+      "label": "server:build",
+      "type": "shell",
+      "command": "msbuild",
+      "args": [
+        "/property:GenerateFullPaths=true",
+        "/property:Configuration=Debug",
+        "/target:build",
+        "/verbosity:minimal"
+      ],
+      "problemMatcher": ["$msCompile"],
+      "options": {
+        "cwd": "${workspaceRoot}/server"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "windows": {
+        "command": "msbuild.exe"
+      }
+    },
+    {
+      "label": "server:run",
+      "type": "shell",
+      "command": "mono",
+      "args": [
+        "Beginor.OwinApp.Entry.exe"
+      ],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/server/bin"
+      }
+    },
+    {
+      "label": "server:run-win",
+      "type": "process",
+      "command": "Beginor.OwinApp.Entry.exe",
+      "args": [],
+      "problemMatcher": [],
+      "options": {
+        "cwd": "${workspaceRoot}/server/bin"
+      }
+    }
+  ]
+}

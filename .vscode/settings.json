@@ -1,0 +1,27 @@
+{
+  "debug.inlineValues": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "off",
+  "editor.wrappingIndent": "indent",
+  "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+  },
+  "editor.quickSuggestionsDelay": 100,
+  "editor.rulers": [79, 120],
+  "editor.renderLineHighlight": "all",
+  "editor.minimap.enabled": false,
+  "extensions.autoUpdate": false,
+  "files.autoSave": "off",
+  "files.insertFinalNewline": true,
+  "git.enabled": true,
+  "npm.autoDetect": "off",
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.tsc.autoDetect": "off",
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none"
+}
