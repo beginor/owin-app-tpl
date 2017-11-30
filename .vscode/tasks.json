@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "client:install",
+      "label": "client: install",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -16,7 +16,7 @@
       }
     },
     {
-      "label": "client:clean",
+      "label": "client: clean",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -29,7 +29,7 @@
       }
     },
     {
-      "label": "client:build",
+      "label": "client: build",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -49,7 +49,7 @@
       }
     },
     {
-      "label": "client:build-prod",
+      "label": "client: build-prod",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -69,7 +69,7 @@
       }
     },
     {
-      "label": "client:lint",
+      "label": "client: lint",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -84,7 +84,7 @@
       }
     },
     {
-      "label": "client:start",
+      "label": "client: start",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -100,7 +100,7 @@
       }
     },
     {
-      "label": "client:test",
+      "label": "client: test",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -117,7 +117,7 @@
       }
     },
     {
-      "label": "client:test-coverage",
+      "label": "client: test-coverage",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -134,7 +134,7 @@
       }
     },
     {
-      "label": "client:e2e",
+      "label": "client: e2e",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -151,7 +151,7 @@
       }
     },
     {
-      "label": "client:webdriver-update",
+      "label": "client: webdriver-update",
       "command": "npm",
       "type": "shell",
       "args": [
@@ -164,7 +164,7 @@
       }
     },
     {
-      "label": "server:restore",
+      "label": "server: restore",
       "type": "shell",
       "command": "nuget",
       "args": [
@@ -179,7 +179,7 @@
       }
     },
     {
-      "label": "server:clean",
+      "label": "server: clean",
       "type": "shell",
       "command": "msbuild",
       "args": [
@@ -199,7 +199,7 @@
       }
     },
     {
-      "label": "server:build",
+      "label": "server: build",
       "type": "shell",
       "command": "msbuild",
       "args": [
@@ -223,7 +223,7 @@
       }
     },
     {
-      "label": "server:run",
+      "label": "server: run",
       "type": "shell",
       "command": "mono",
       "args": [
@@ -233,10 +233,12 @@
       "options": {
         "cwd": "${workspaceRoot}/server/bin"
       },
-      "dependsOn": ["server:build"]
+      "dependsOn": [
+        "server: build"
+      ]
     },
     {
-      "label": "server:run-win",
+      "label": "server: run-win",
       "type": "process",
       "command": "Beginor.OwinApp.Entry.exe",
       "args": [],
@@ -244,7 +246,9 @@
       "options": {
         "cwd": "${workspaceRoot}/server/bin"
       },
-      "dependsOn": ["server:build"]
+      "dependsOn": [
+        "server: build"
+      ]
     }
   ]
 }
