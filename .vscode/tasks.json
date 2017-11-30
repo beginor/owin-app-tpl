@@ -188,7 +188,9 @@
         "/target:clean",
         "/verbosity:normal"
       ],
-      "problemMatcher": ["$msCompile"],
+      "problemMatcher": [
+        "$msCompile"
+      ],
       "options": {
         "cwd": "${workspaceRoot}/server"
       },
@@ -206,7 +208,9 @@
         "/target:build",
         "/verbosity:minimal"
       ],
-      "problemMatcher": ["$msCompile"],
+      "problemMatcher": [
+        "$msCompile"
+      ],
       "options": {
         "cwd": "${workspaceRoot}/server"
       },
@@ -228,7 +232,8 @@
       "problemMatcher": [],
       "options": {
         "cwd": "${workspaceRoot}/server/bin"
-      }
+      },
+      "dependsOn": ["server:build"]
     },
     {
       "label": "server:run-win",
@@ -238,7 +243,8 @@
       "problemMatcher": [],
       "options": {
         "cwd": "${workspaceRoot}/server/bin"
-      }
+      },
+      "dependsOn": ["server:build"]
     }
   ]
 }
