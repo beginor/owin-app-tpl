@@ -17,8 +17,9 @@
       "type": "mono",
       "request": "launch",
       "console": "integratedTerminal",
-      "program": "${workspaceRoot}/server/src/OwinApp.Entry/bin/Beginor.OwinApp.Entry.exe",
-      "cwd": "${workspaceRoot}/server/src/OwinApp.Entry/bin"
+      "program": "${workspaceRoot}/server/bin/Beginor.OwinApp.Entry.exe",
+      "cwd": "${workspaceRoot}/server/bin",
+      "preLaunchTask": "server: build"
     }
   ]
 }
