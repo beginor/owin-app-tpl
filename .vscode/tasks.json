@@ -166,16 +166,13 @@
     {
       "label": "server: restore",
       "type": "shell",
-      "command": "nuget",
+      "command": "msbuild",
       "args": [
-        "restore"
+        "/t:restore"
       ],
       "problemMatcher": [],
       "options": {
         "cwd": "${workspaceRoot}/server"
-      },
-      "windows": {
-        "command": "nuget.exe"
       }
     },
     {
@@ -193,9 +190,6 @@
       ],
       "options": {
         "cwd": "${workspaceRoot}/server"
-      },
-      "windows": {
-        "command": "msbuild.exe"
       }
     },
     {
@@ -217,9 +211,6 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "windows": {
-        "command": "msbuild.exe"
       }
     },
     {
@@ -229,19 +220,6 @@
       "args": [
         "Beginor.OwinApp.Entry.exe"
       ],
-      "problemMatcher": [],
-      "options": {
-        "cwd": "${workspaceRoot}/server/bin"
-      },
-      "dependsOn": [
-        "server: build"
-      ]
-    },
-    {
-      "label": "server: run-win",
-      "type": "process",
-      "command": "Beginor.OwinApp.Entry.exe",
-      "args": [],
       "problemMatcher": [],
       "options": {
         "cwd": "${workspaceRoot}/server/bin"
