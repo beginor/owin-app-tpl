@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
 fi
 echo "Start build client..."
 cd ../client
-npm run build-prod
+npm run build
 if [ $? -ne 0 ]; then
     echo "Client build error!"
     exit 3
