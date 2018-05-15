@@ -10,9 +10,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo "Server build success, copy build output to docker build ..."
-mkdir -p ../docker/build/web && cp -r bin ../docker/build/web \
+mkdir -p ../docker/build/web && cp -r src/OwinApp.Entry/bin/Release/net461 ../docker/build/web/bin \
     && mv ../docker/build/web/bin/Castle.Services.Logging.log4netIntegration.dll ../docker/build/web/bin/Castle.Services.Logging.Log4netIntegration.dll \
-    && mv ../docker/build/web/bin/Castle.Services.Logging.log4netIntegration.xml ../docker/build/web/bin/Castle.Services.Logging.Log4netIntegration.xml \
     && mv ../docker/build/web/bin/*.config ../docker/build/web \
     && mv ../docker/build/web/Beginor.OwinApp.Entry.exe.config ../docker/build/web/web.config
 if [ $? -ne 0 ]; then
