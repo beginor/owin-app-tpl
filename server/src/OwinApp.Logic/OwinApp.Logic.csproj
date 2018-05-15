@@ -22,12 +22,12 @@
     <PackageReference Include="Beginor.AppFx.Core" Version="1.2.0" />
     <PackageReference Include="Castle.Core" Version="4.2.1" />
     <PackageReference Include="Castle.Windsor" Version="4.1.0" />
-    <PackageReference Include="Iesi.Collections" Version="4.0.2" />
+    <PackageReference Include="Iesi.Collections" Version="4.0.4" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.1" />
-    <PackageReference Include="NHibernate" Version="5.0.1" />
+    <PackageReference Include="NHibernate" Version="5.1.2" />
     <PackageReference Include="NHibernate.AspNet.Identity" Version="5.0.1" />
-    <PackageReference Include="Remotion.Linq" Version="2.1.2" />
-    <PackageReference Include="Remotion.Linq.EagerFetching" Version="2.1.0" />
+    <PackageReference Include="Remotion.Linq" Version="2.2.0" />
+    <PackageReference Include="Remotion.Linq.EagerFetching" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OwinApp.Data\OwinApp.Data.csproj" />

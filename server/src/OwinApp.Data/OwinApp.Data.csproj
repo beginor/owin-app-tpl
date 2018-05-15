@@ -7,16 +7,16 @@
   <ItemGroup>
     <PackageReference Include="Antlr3.Runtime" Version="3.5.1" />
     <PackageReference Include="Beginor.AppFx.Core" Version="1.2.0" />
-    <PackageReference Include="Beginor.AppFx.Repository.Hibernate" Version="1.2.1" />
+    <PackageReference Include="Beginor.AppFx.Repository.Hibernate" Version="1.2.3" />
     <PackageReference Include="Castle.Core" Version="4.2.1" />
     <PackageReference Include="Castle.Windsor" Version="4.1.0" />
-    <PackageReference Include="Iesi.Collections" Version="4.0.2" />
+    <PackageReference Include="Iesi.Collections" Version="4.0.4" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.1" />
-    <PackageReference Include="NHibernate" Version="5.0.1" />
+    <PackageReference Include="NHibernate" Version="5.1.2" />
     <PackageReference Include="NHibernate.AspNet.Identity" Version="5.0.1" />
-    <PackageReference Include="Npgsql" Version="3.2.5" />
-    <PackageReference Include="Remotion.Linq" Version="2.1.2" />
-    <PackageReference Include="Remotion.Linq.EagerFetching" Version="2.1.0" />
+    <PackageReference Include="Npgsql" Version="3.2.7" />
+    <PackageReference Include="Remotion.Linq" Version="2.2.0" />
+    <PackageReference Include="Remotion.Linq.EagerFetching" Version="2.2.0" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
