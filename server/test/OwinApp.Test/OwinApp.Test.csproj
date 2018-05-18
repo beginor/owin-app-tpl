@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <AssemblyName>Beginor.OwinApp.Test</AssemblyName>
@@ -69,10 +69,9 @@
       <Link>windsor.config</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\src\OwinApp.Entry\app.config">
-      <Link>app.config</Link>
+    <None Include="..\..\src\OwinApp.Entry\bin\Debug\net461\Beginor.OwinApp.Entry.exe.config">
+      <Link>Beginor.OwinApp.Test.dll.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>
