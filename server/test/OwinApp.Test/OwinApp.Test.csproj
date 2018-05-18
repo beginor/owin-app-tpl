@@ -3,6 +3,7 @@
     <TargetFramework>net461</TargetFramework>
     <AssemblyName>Beginor.OwinApp.Test</AssemblyName>
     <RootNamespace>Beginor.OwinApp.Test</RootNamespace>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

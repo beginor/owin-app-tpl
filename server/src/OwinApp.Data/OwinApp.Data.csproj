@@ -1,8 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <AssemblyName>Beginor.OwinApp.Data</AssemblyName>
     <RootNamespace>Beginor.OwinApp.Data</RootNamespace>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Antlr3.Runtime" Version="3.5.1" />
