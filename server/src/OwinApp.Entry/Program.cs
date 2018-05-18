@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
@@ -18,8 +18,7 @@ namespace Beginor.OwinApp.Entry {
             using (var server = BuildNowinServer(ip, port)) {
                 var serverRef = new WeakReference<INowinServer>(server);
                 Task.Run(() => {
-                    INowinServer nowinServer;
-                    if (serverRef.TryGetTarget(out nowinServer)) {
+                    if (serverRef.TryGetTarget(out INowinServer nowinServer)) {
                         nowinServer.Start();
                     }
                 });
