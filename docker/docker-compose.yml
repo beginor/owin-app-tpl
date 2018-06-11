@@ -1,7 +1,7 @@
 version: "3"
 services:
   jexus:
-    image: 192.168.1.2:5000/beginor/owin-app:latest
+    image: 192.168.6.1:5000/beginor/owin-app:latest
     ports:
       - 5839:80
     volumes:
@@ -14,7 +14,7 @@ services:
       - ./jexus/web/windsor.config:/var/www/default/windsor.config
     restart: unless-stopped
   postgres:
-    image: 192.168.1.2:5000/beginor/postgis:9.5
+    image: 192.168.6.1:5000/beginor/postgis:9.5
     ports:
       - 3232:5432
     volumes:
