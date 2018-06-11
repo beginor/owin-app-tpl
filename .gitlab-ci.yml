@@ -26,15 +26,15 @@ Test in CI:
     - mono ~/.nuget/packages/nunit.consolerunner/3.8.0/tools/nunit3-console.exe test/OwinApp.Test/bin/Release/net461/Beginor.OwinApp.Test.dll
     - rm TestResult.xml
     - cd ..
-Depoly to server:
-  stage: deploy
-  script:
-    - cd client
-    - npm install
-    - cd ..
-    - cd server
-    - msbuild /nologo /v:minimal /t:Restore
-    - cd ..
-    - cd docker
-    - ./build.sh
-    - ./deploy.sh
+# Depoly to server:
+#   stage: deploy
+#   script:
+#     - cd client
+#     - npm install
+#     - cd ..
+#     - cd server
+#     - msbuild /nologo /v:minimal /t:Restore
+#     - cd ..
+#     - cd docker
+#     - ./build.sh
+#     - ./deploy.sh
