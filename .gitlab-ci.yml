@@ -1,0 +1,17 @@
+stages:
+  - build
+  - test
+  - deploy
+
+Build in CI:
+  stage: build
+  script:
+    - cd client
+    - npm install
+    - npm run lint
+    - npm run build
+    - cd ..
+    - cd server
+    - msbuild /nologo /v:minimal /t:Restore
+    - msbuild /nologo /v:minimal /t:Build /p:Configuration=Release
+    - cd ..

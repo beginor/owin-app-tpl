@@ -49,26 +49,6 @@
       }
     },
     {
-      "label": "client: build-prod",
-      "command": "npm",
-      "type": "shell",
-      "args": [
-        "run",
-        "build-prod"
-      ],
-      "problemMatcher": [
-        "$tsc",
-        "$node-sass"
-      ],
-      "options": {
-        "cwd": "${workspaceRoot}/client"
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
       "label": "client: lint",
       "command": "npm",
       "type": "shell",
