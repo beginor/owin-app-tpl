@@ -12,6 +12,7 @@ Build in CI:
     - npm run build
     - cd ..
     - cd server
+    - msbuild /nologo /v:minimal /t:Clean
     - msbuild /nologo /v:minimal /t:Restore
     - msbuild /nologo /v:minimal /t:Build /p:Configuration=Release
     - cd ..
