@@ -22,10 +22,10 @@ echo "Create deploy config ..."
 mkdir -p deploy/jexus/conf deploy/jexus/log deploy/jexus/web/assets/ deploy/postgres/data \
     && cp docker-compose.yml deploy \
     && cp jexus-conf deploy/jexus/conf/default \
-    && sed 's/debug="true"/debug="false"/g' ../server/src/OwinApp.Entry/bin/Release/Beginor.OwinApp.Entry.exe.config > deploy/jexus/web/web.config \
-    && sed 's/value="DEBUG"/value="ERROR"/g' ../server/src/OwinApp.Entry/bin/Release/log.config > deploy/jexus/web/log.config \
-    && sed 's/127\.0\.0\.1/postgres/g' ../server/src/OwinApp.Entry/bin/Release/hibernate.config > deploy/jexus/web/hibernate.config \
-    && cp ../server/src/OwinApp.Entry/bin/Release/windsor.config deploy/jexus/web/windsor.config
+    && sed 's/debug="true"/debug="false"/g' ../server/src/OwinApp.Entry/bin/Release/net461/Beginor.OwinApp.Entry.exe.config > deploy/jexus/web/web.config \
+    && sed 's/value="DEBUG"/value="ERROR"/g' ../server/src/OwinApp.Entry/bin/Release/net461/log.config > deploy/jexus/web/log.config \
+    && sed 's/127\.0\.0\.1/postgres/g' ../server/src/OwinApp.Entry/bin/Release/net461/hibernate.config > deploy/jexus/web/hibernate.config \
+    && cp ../server/src/OwinApp.Entry/bin/Release/net461/windsor.config deploy/jexus/web/windsor.config
 if [ $? -ne 0 ]; then
     echo "Create deploy config error!"
     exit 3
