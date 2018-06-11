@@ -37,4 +37,4 @@ Depoly to server:
     - cd ..
     - cd docker
     - ./build.sh
-    - ./depoly.sh
+    - ./deploy.sh
