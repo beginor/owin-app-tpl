@@ -4,18 +4,18 @@ if [ $? -ne 0 ]; then
     echo "build error!"
     exit 1
 fi
-echo "Push docker image to registry 192.168.1.2:5000 ..."
-docker tag beginor/owin-app 192.168.1.2:5000/beginor/owin-app \
-    && docker push 192.168.1.2:5000/beginor/owin-app \
-    && docker rmi 192.168.1.2:5000/beginor/owin-app \
-    && docker tag beginor/owin-app:$(date +%Y%m%d) 192.168.1.2:5000/beginor/owin-app:$(date +%Y%m%d) \
-    && docker push 192.168.1.2:5000/beginor/owin-app:$(date +%Y%m%d) \
-    && docker rmi 192.168.1.2:5000/beginor/owin-app:$(date +%Y%m%d) \
-    && docker tag beginor/postgis:9.5 192.168.1.2:5000/beginor/postgis:9.5 \
-    && docker push 192.168.1.2:5000/beginor/postgis:9.5 \
-    && docker rmi 192.168.1.2:5000/beginor/postgis:9.5
+echo "Push docker image to registry 192.168.6.1:5000 ..."
+docker tag beginor/owin-app 192.168.6.1:5000/beginor/owin-app \
+    && docker push 192.168.6.1:5000/beginor/owin-app \
+    && docker rmi 192.168.6.1:5000/beginor/owin-app \
+    && docker tag beginor/owin-app:$(date +%Y%m%d) 192.168.6.1:5000/beginor/owin-app:$(date +%Y%m%d) \
+    && docker push 192.168.6.1:5000/beginor/owin-app:$(date +%Y%m%d) \
+    && docker rmi 192.168.6.1:5000/beginor/owin-app:$(date +%Y%m%d) \
+    && docker tag beginor/postgis:9.5 192.168.6.1:5000/beginor/postgis:9.5 \
+    && docker push 192.168.6.1:5000/beginor/postgis:9.5 \
+    && docker rmi 192.168.6.1:5000/beginor/postgis:9.5
 if [ $? -ne 0 ]; then
-    echo "Push docker image to registry 192.168.1.2:5000 error!"
+    echo "Push docker image to registry 192.168.6.1:5000 error!"
     exit 2
 fi
 echo "Create deploy config ..."
@@ -31,17 +31,17 @@ if [ $? -ne 0 ]; then
     exit 3
 fi
 echo "Copy deploy files to docker server ..."
-scp -r deploy ubuntu@192.168.1.2:~/owin-app && rm -rf deploy
+scp -r deploy ubuntu@192.168.6.1:~/owin-app && rm -rf deploy
 if [ $? -ne 0 ]; then
     echo "Copy deploy files to docker server error!"
     exit 3
 fi
 echo "Execute update script on docker server ..."
-ssh ubuntu@192.168.1.2 -t '
+ssh ubuntu@192.168.6.1 -t '
 cp -rv owin-app Documents/docker/
 rm -rf owin-app
 cd Documents/docker/owin-app
 docker-compose down
-docker rmi 192.168.1.2:5000/beginor/owin-app
+docker rmi 192.168.6.1:5000/beginor/owin-app
 docker-compose up -d
 '
