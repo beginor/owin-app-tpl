@@ -222,7 +222,7 @@
       ],
       "problemMatcher": [],
       "options": {
-        "cwd": "${workspaceRoot}/server/bin"
+        "cwd": "${workspaceRoot}/server/src/OwinApp.Entry/bin/Debug/net461"
       },
       "dependsOn": [
         "server: build"
