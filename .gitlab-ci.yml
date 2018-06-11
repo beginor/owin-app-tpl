@@ -19,6 +19,8 @@ Build in CI:
 Test in CI:
   stage: test
   script:
+    - cd server
     - msbuild /nologo /v:minimal /t:Build /p:Configuration=Release
     - mono ~/.nuget/packages/nunit.consolerunner/3.8.0/tools/nunit3-console.exe server/test/OwinApp.Test/bin/Release/net461/Beginor.OwinApp.Test.dll
     - rm TestResult.xml
+    - cd ..
