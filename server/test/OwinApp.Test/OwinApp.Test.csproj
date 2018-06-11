@@ -45,6 +45,7 @@
     <PackageReference Include="NHibernate.AspNet.Identity" Version="5.0.1" />
     <PackageReference Include="Npgsql" Version="4.0.0" />
     <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.8.0" />
     <PackageReference Include="Owin" Version="1.0" />
     <PackageReference Include="Remotion.Linq" Version="2.2.0" />
     <PackageReference Include="Remotion.Linq.EagerFetching" Version="2.2.0" />
