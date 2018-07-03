@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using Beginor.Owin.StaticFile;
@@ -120,10 +121,27 @@ namespace Beginor.OwinApp.Api {
             // use windsor container
             config.UseWindsorContainer(app.GetWindsorContainer());
             // enable swagger 
-            config.EnableSwagger(c => c.SingleApiVersion("v1", "API Help"))
-                .EnableSwaggerUi();
+            ConfigSwagger(config);
 
             app.UseWebApi(config);
+        }
+
+        private static void ConfigSwagger(HttpConfiguration config) {
+            config.EnableSwagger(swagger => {
+                swagger.SingleApiVersion("v1", "API Help");
+                // Get all xml comments;
+                var dir = new DirectoryInfo(
+                    AppDomain.CurrentDomain.BaseDirectory
+                );
+                var xmlFiles = dir.EnumerateFiles(
+                    "*.xml",
+                    SearchOption.AllDirectories
+                ).Select(f => f.FullName);
+                foreach (var xmlFile in xmlFiles) {
+                    swagger.IncludeXmlComments(xmlFile);
+                }
+                swagger.ResolveConflictingActions(descs => descs.First());
+            }).EnableSwaggerUi();
         }
 
     }
