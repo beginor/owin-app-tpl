@@ -4,6 +4,8 @@
     <AssemblyName>Beginor.OwinApp.Model</AssemblyName>
     <RootNamespace>Beginor.OwinApp.Model</RootNamespace>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
